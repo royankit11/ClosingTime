@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F74D3F9E28AD4DB300C69B34 /* CalculateCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D3F9D28AD4DB300C69B34 /* CalculateCall.swift */; };
+		F74D3F9F28AD4DB300C69B34 /* CalculateCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D3F9D28AD4DB300C69B34 /* CalculateCall.swift */; };
+		F74D3FA128AD4DE200C69B34 /* CalculateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D3FA028AD4DE200C69B34 /* CalculateModel.swift */; };
+		F74D3FA228AD4DE200C69B34 /* CalculateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D3FA028AD4DE200C69B34 /* CalculateModel.swift */; };
+		F74D3FA428AD4E5500C69B34 /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D3FA328AD4E5500C69B34 /* CalculateViewModel.swift */; };
+		F74D3FA528AD4E5500C69B34 /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D3FA328AD4E5500C69B34 /* CalculateViewModel.swift */; };
+		F755EB1728B03D3A00E1BA5E /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755EB1628B03D3A00E1BA5E /* WeatherDataModel.swift */; };
+		F755EB1828B03D3A00E1BA5E /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755EB1628B03D3A00E1BA5E /* WeatherDataModel.swift */; };
+		F772AFD228B2D5AF00081E39 /* DeviceLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772AFD128B2D5AF00081E39 /* DeviceLocationService.swift */; };
+		F772AFD328B2D5AF00081E39 /* DeviceLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772AFD128B2D5AF00081E39 /* DeviceLocationService.swift */; };
 		F78C158828789E540047E166 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78C158728789E540047E166 /* Tests_iOS.swift */; };
 		F78C158A28789E540047E166 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78C158928789E540047E166 /* Tests_iOSLaunchTests.swift */; };
 		F78C159428789E540047E166 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78C159328789E540047E166 /* Tests_macOS.swift */; };
@@ -37,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F74D3F9D28AD4DB300C69B34 /* CalculateCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCall.swift; sourceTree = "<group>"; };
+		F74D3FA028AD4DE200C69B34 /* CalculateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateModel.swift; sourceTree = "<group>"; };
+		F74D3FA328AD4E5500C69B34 /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
+		F755EB1628B03D3A00E1BA5E /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
+		F772AFD128B2D5AF00081E39 /* DeviceLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceLocationService.swift; sourceTree = "<group>"; };
 		F78C156F28789E540047E166 /* ClosingTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosingTimeApp.swift; sourceTree = "<group>"; };
 		F78C157028789E540047E166 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F78C157128789E540047E166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +64,7 @@
 		F78C158F28789E540047E166 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78C159328789E540047E166 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		F78C159528789E540047E166 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		F7DC6B5C28B1B368000A7362 /* ClosingTime--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ClosingTime--iOS--Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +102,7 @@
 		F78C156928789E540047E166 = {
 			isa = PBXGroup;
 			children = (
+				F7DC6B5C28B1B368000A7362 /* ClosingTime--iOS--Info.plist */,
 				F78C156E28789E540047E166 /* Shared */,
 				F78C157D28789E540047E166 /* macOS */,
 				F78C158628789E540047E166 /* Tests iOS */,
@@ -100,6 +117,11 @@
 				F78C156F28789E540047E166 /* ClosingTimeApp.swift */,
 				F78C157028789E540047E166 /* ContentView.swift */,
 				F78C157128789E540047E166 /* Assets.xcassets */,
+				F74D3F9D28AD4DB300C69B34 /* CalculateCall.swift */,
+				F74D3FA028AD4DE200C69B34 /* CalculateModel.swift */,
+				F74D3FA328AD4E5500C69B34 /* CalculateViewModel.swift */,
+				F755EB1628B03D3A00E1BA5E /* WeatherDataModel.swift */,
+				F772AFD128B2D5AF00081E39 /* DeviceLocationService.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -301,6 +323,11 @@
 			files = (
 				F78C159928789E540047E166 /* ContentView.swift in Sources */,
 				F78C159728789E540047E166 /* ClosingTimeApp.swift in Sources */,
+				F755EB1728B03D3A00E1BA5E /* WeatherDataModel.swift in Sources */,
+				F74D3FA428AD4E5500C69B34 /* CalculateViewModel.swift in Sources */,
+				F772AFD228B2D5AF00081E39 /* DeviceLocationService.swift in Sources */,
+				F74D3FA128AD4DE200C69B34 /* CalculateModel.swift in Sources */,
+				F74D3F9E28AD4DB300C69B34 /* CalculateCall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +337,11 @@
 			files = (
 				F78C159A28789E540047E166 /* ContentView.swift in Sources */,
 				F78C159828789E540047E166 /* ClosingTimeApp.swift in Sources */,
+				F755EB1828B03D3A00E1BA5E /* WeatherDataModel.swift in Sources */,
+				F74D3FA528AD4E5500C69B34 /* CalculateViewModel.swift in Sources */,
+				F772AFD328B2D5AF00081E39 /* DeviceLocationService.swift in Sources */,
+				F74D3FA228AD4DE200C69B34 /* CalculateModel.swift in Sources */,
+				F74D3F9F28AD4DB300C69B34 /* CalculateCall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,8 +495,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TL893ZWF55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ClosingTime--iOS--Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Closing Time would like to use your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Closing Time would like to use your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -492,8 +528,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TL893ZWF55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ClosingTime--iOS--Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Closing Time would like to use your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Closing Time would like to use your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
