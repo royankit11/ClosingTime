@@ -12,7 +12,7 @@ import Combine
 class CalculateCall {
     
     func getPred(max: Double, min: Double, dew: Double, humidity: Double, ws: Double, precip: Double, completion: @escaping ([CalculateModel]) -> ()) {
-        guard let url = URL(string: "http://10.0.0.209:900/getData/" + String(max) + "/" + String(min) + "/" + String(dew) + "/" + String(humidity) + "/" + String(ws) + "/" + String(precip))
+        guard let url = URL(string: "143.215.50.174:900/getData/" + String(max) + "/" + String(min) + "/" + String(dew) + "/" + String(humidity) + "/" + String(ws) + "/" + String(precip))
         else {
             fatalError("URL is not correct!")
         }

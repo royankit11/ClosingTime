@@ -88,8 +88,7 @@ var body: some View {
                                     }
                                 } else {
                                     locationToUse = zipcode
-                                    if(!(NSPredicate(format: "SELF MATCHES %@", "^\\d{5}(?:[-\\s]?\\d{4})?$")
-                                        .evaluate(with: zipcode.uppercased()))) {
+                                    if(!(NSPredicate(format: "SELF MATCHES %@", "^\\d{5}(?:[-\\s]?\\d{4})?$") .evaluate(with: zipcode.uppercased()))) {
                                         let zipAlert = UIAlertController(title: "Invalid zipcode", message: "Please enter a valid zipcode", preferredStyle: .alert)
                                         zipAlert.addAction(UIAlertAction(title: "Got it!", style: .default))
                                         let scenes = UIApplication.shared.connectedScenes
@@ -120,12 +119,27 @@ var body: some View {
                                             window!.present(networkAlert, animated: true)
                                             return
                                         }
-                                        max = String(round(((decodedResponse?.days[0].tempmax)! * (9/5) + 32) * 10)/10)
-                                        min = String(round(((decodedResponse?.days[0].tempmin)! * (9/5) + 32)*10)/10)
-                                        dew = String(round(((decodedResponse?.days[0].dew)! * (9/5) + 32)*10)/10)
-                                        humidity = String(round((decodedResponse?.days[0].humidity)!*10)/10)
-                                        precip = String(round((decodedResponse?.days[0].precip)!*10)/10)
-                                        ws = String(round(((decodedResponse?.days[0].windspeed)! / 1.609)*10)/10)
+                                        var intMax = (decodedResponse?.days[0].tempmax)!
+                                        intMax = intMax * (9/5) + 32
+                                        max = String(round(intMax * 10)/10)
+                                        
+                                        var intMin = (decodedResponse?.days[0].tempmin)!
+                                        intMin = intMin * (9/5) + 32
+                                        min = String(round(intMin * 10)/10)
+                                    
+                                        var intDew = (decodedResponse?.days[0].dew)!
+                                        intDew = intDew * (9/5) + 32
+                                        dew = String(round(intDew * 10)/10)
+                                    
+                                        var intHumidity = (decodedResponse?.days[0].humidity)!
+                                        humidity = String(round(intHumidity * 10)/10)
+                                    
+                                        var intPrecip = (decodedResponse?.days[0].precip)!
+                                        precip = String(round(intPrecip * 10)/10)
+                                    
+                                        var intWs = (decodedResponse?.days[0].windspeed)!
+                                        ws = String(round((intWs/1.609) * 10)/10)
+                                    
 
                                     }
                                     
@@ -136,7 +150,7 @@ var body: some View {
                             Task {
                                 let (data, _) = try await URLSession.shared.data(from: URL(string:"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + String(coordinates.lat) + "," + String(coordinates.lon) + "?unitGroup=metric&key=PTVHZDB7WWGNQKMF8RGWW8X3U&contentType=json")!)
                                 
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     let decodedResponse = try? JSONDecoder().decode(WeatherDataModel.self, from: data)
                                     if(decodedResponse == nil) {
                                         let networkAlert = UIAlertController(title: "Network Error", message: "Could not connect to network", preferredStyle: .alert)
@@ -148,17 +162,34 @@ var body: some View {
                                         window!.present(networkAlert, animated: true)
                                         return
                                     }
-                                    max = String(round(((decodedResponse?.days[0].tempmax)! * (9/5) + 32) * 10)/10)
-                                    min = String(round(((decodedResponse?.days[0].tempmin)! * (9/5) + 32)*10)/10)
-                                    dew = String(round(((decodedResponse?.days[0].dew)! * (9/5) + 32)*10)/10)
-                                    humidity = String(round((decodedResponse?.days[0].humidity)!*10)/10)
-                                    precip = String(round((decodedResponse?.days[0].precip)!*10)/10)
-                                    ws = String(round(((decodedResponse?.days[0].windspeed)! / 1.609)*10)/10)
+
+                                
+                                var intMax = (decodedResponse?.days[0].tempmax)!
+                                intMax = intMax * (9/5) + 32
+                                max = String(round(intMax * 10)/10)
+                                
+                                var intMin = (decodedResponse?.days[0].tempmin)!
+                                intMin = intMin * (9/5) + 32
+                                min = String(round(intMin * 10)/10)
+                            
+                                var intDew = (decodedResponse?.days[0].dew)!
+                                intDew = intDew * (9/5) + 32
+                                dew = String(round(intDew * 10)/10)
+                            
+                                var intHumidity = (decodedResponse?.days[0].humidity)!
+                                humidity = String(round(intHumidity * 10)/10)
+                            
+                                var intPrecip = (decodedResponse?.days[0].precip)!
+                                precip = String(round(intPrecip * 10)/10)
+                            
+                                var intWs = (decodedResponse?.days[0].windspeed)!
+                                ws = String(round((intWs/1.609) * 10)/10)
 
                                 }
                                 
                             }
                         }))
+                        
                         
                         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
                         
